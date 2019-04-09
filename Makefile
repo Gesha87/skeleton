@@ -1,14 +1,16 @@
-init: d-down d-pull d-build d-up
+init: dcd dcp dcb dcu dcci
 
-
-d-up:
+dcu:
 	docker-compose up -d
 
-d-down:
+dcd:
 	docker-compose down -v --remove-orphans
 
-d-pull:
+dcp:
 	docker-compose pull
 
-d-build:
+dcb:
 	docker-compose build
+
+dcci:
+	docker-compose run --rm php-cli composer install
